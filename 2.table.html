@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 코딩</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            background-color: #fff;
+            width: 33.33%;
+        }
+
+        .gray {
+            background-color: #f2f2f2;
+        }
+
+        .blind {
+            width: 0;
+            height: 0;
+            border: 0;
+            padding: 8px;
+            text-indent: -9999999999999px;
+            overflow: hidden;
+        }
+
+        /* 코딩에서의 마스크처리 */
+        tbody tr:nth-last-child(-n+2)td {
+            color: rgb(59, 59, 186);
+            font-weight: bold;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption class="blind">공연</caption> `
+
+        <tr>
+            <td colspan="3" class="gray">공연요금</td>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1행 1열</td>
+                <td>1행 2열</td>
+                <td>1행 3열</td>
+            </tr>
+            <tr>
+                <td colspan="2">2행 2개 열 합치기</td>
+                <td>2행 3열</td>
+
+            </tr>
+            <tr>
+                <td>구분</td>
+                <td>s석</td>
+                <td>vip석</td>
+            </tr>
+            <tr>
+                <td>성인</td>
+                <td>30,000원</td>
+                <td>50,000원</td>
+            </tr>
+            <tr>
+                <td>청소년</td>
+                <td>10,000원</td>
+                <td>20,000원</td>
+            </tr>
+            <tr>
+                <td>소인</td>
+                <td colspan="2" class="red">일반 요금의 50%</td>
+
+            </tr>
+            <tr>
+                <td rowspan="2">공연시간</td>
+                <td>1회</td>
+                <td>13:00~15:00</td>
+            </tr>
+            <tr>
+                <td>2회</td>
+                <td>17:00~19:00</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+</body>
+
+</html>
